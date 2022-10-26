@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'com.github.johnrengelman.shadow' version '7.1.2' apply false
+}
+
+group = 'ru.otus'
+sourceCompatibility = JavaVersion.toVersion('17')
+targetCompatibility = JavaVersion.toVersion('17')
+
+idea {
+    project {
+        languageLevel = 17
+    }
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+allprojects {
+    group "ru.otus"
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+
